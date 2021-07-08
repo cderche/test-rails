@@ -1,1 +1,11 @@
-<h1>Hello World</h1>
+<style>
+<% if @company %>
+  body {
+    background-color: <%= @company.bg_color %>;
+    color: <%= @company.primary_color %>;
+  }
+<% end %>
+</style>
+
+<h1>Hello,</h1>
+<h4>Your original url is: <%= @request.original_url %></h4>
